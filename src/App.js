@@ -1,7 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 
-var bookHQ = {
+const bookHQ = {
   MustRead: [
     {
       name: "The Rudest Book Ever",
@@ -73,11 +73,9 @@ var bookHQ = {
 
 
 export default function App() {
-  var [selectedGenre, setGenre] = useState("MustRead");
+  let [selectedGenre, setGenre] = useState("MustRead");
 
-  function clickHandler(genre) {
-    setGenre(genre);
-  }
+  const clickHandler = genre => setGenre(genre)
 
   return (
     <div className="App">
